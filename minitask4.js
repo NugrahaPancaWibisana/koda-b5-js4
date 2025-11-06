@@ -11,7 +11,7 @@ for (let i = 0; i < arr.length; i++) {
     const element = arr[i];
     if (Array.isArray(element)) {
         obj["array"]++
-    } else if (element instanceof Object) {
+    } else if (element instanceof Object && !Array.isArray(element)) {
         obj["object"]++
     } else {
         obj[typeof element]++
